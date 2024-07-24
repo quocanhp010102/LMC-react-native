@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "changelogDate": "20220324065435",
+  "clientRootFolder": "LMSTrainingManagement",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "questions",
+  "fields": [
+    {
+      "fieldName": "questionsName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "questions_point",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LMSTrainingManagement",
+  "name": "Questions",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "answers",
+      "otherEntityRelationshipName": "questions",
+      "relationshipName": "answers",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "exams",
+      "otherEntityRelationshipName": "questions",
+      "relationshipName": "exams",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": true,
+  "service": "serviceClass"
+}

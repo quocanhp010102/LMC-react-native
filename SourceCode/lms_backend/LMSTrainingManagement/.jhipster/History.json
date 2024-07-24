@@ -1,0 +1,37 @@
+{
+  "changelogDate": "20220412075705",
+  "clientRootFolder": "LMSTrainingManagement",
+  "databaseType": "sql",
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "historyName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "historyTime",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LMSTrainingManagement",
+  "name": "History",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "course",
+      "relationshipName": "course",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "lesson",
+      "relationshipName": "lesson",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": true,
+  "service": "serviceClass"
+}

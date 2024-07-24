@@ -1,0 +1,43 @@
+{
+  "applications": "*",
+  "changelogDate": "20220324065433",
+  "clientRootFolder": "LMSTrainingManagement",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "exams",
+  "fields": [
+    {
+      "fieldName": "examName",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LMSTrainingManagement",
+  "name": "Exams",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "questions",
+      "otherEntityRelationshipName": "exams",
+      "relationshipName": "questions",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "typeOfExams",
+      "otherEntityRelationshipName": "exams",
+      "relationshipName": "typeOfExams",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "noteContent",
+      "otherEntityRelationshipName": "exams",
+      "relationshipName": "noteContent",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": true,
+  "service": "serviceClass"
+}

@@ -1,0 +1,46 @@
+
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "target": "es5",
+    "allowJs": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "isolatedModules": true ,
+    "paths": {
+      "components-base":["./src/components"],
+      "assets": ["./assets"],
+    }
+    
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "lib",
+    "base",
+    "server.ts",
+    "tsconfig.json",
+    "ComponentStick.tsx",
+    "customLog.ts"
+  ],
+//   "include": [
+//     "next-env.d.ts",
+//     "**/*.ts",
+//     "**/*.tsx",
+//     "types/*.d.ts"
+// , "src/screens/CalendarStack/CalendarScreen.js", "src/components/index.js"  ],
+  "extends": "expo/tsconfig.base"
+}

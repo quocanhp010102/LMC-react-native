@@ -1,0 +1,7 @@
+# **/*.json
+# **/*.ts
+# **/*.js
+**/*.css
+**/*.svg
+**/*.html
+README.md

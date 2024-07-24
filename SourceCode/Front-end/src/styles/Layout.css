@@ -1,0 +1,277 @@
+.header {
+    height: 120px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-between !important;
+}
+.search {
+    border-radius: 6px;
+}
+.side-bar {
+    background: #fff9f9;
+    width: 86px;
+    /* animation: sliderHide 0.25s linear forwards; */
+}
+
+.fix_layout {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+
+@keyframes sliderHide {
+    from {
+        width: 14.6vw;
+    }
+    to {
+        width: 4.5vw;
+    }
+}
+
+.side-bar-item {
+    animation: hide 0.25s linear;
+    display: none;
+}
+
+.side-bar-item_show {
+    display: block;
+    animation: show 0.25s linear;
+}
+
+@keyframes hide {
+    100% {
+        display: none;
+    }
+}
+
+@keyframes show {
+    0% {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+
+    98% {
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        display: block !important;
+    }
+}
+
+.body {
+    position: relative;
+    height: auto;
+}
+
+.side-right {
+    position: sticky;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* .ant-menu > .ant-menu-item:hover,
+.ant-menu > .ant-menu-submenu:hover,
+.ant-menu > .ant-menu-item-active,
+.ant-menu > .ant-menu-submenu-active,
+.ant-menu > .ant-menu-item-open,
+.ant-menu > .ant-menu-submenu-open,
+.ant-menu > .ant-menu-item-selected,
+.ant-menu > .ant-menu-submenu-selected {
+  color: red;
+  border-bottom: 2px solid red;
+} */
+/* .left-nav {
+    left: 6vw;
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between !important;
+}
+.right-nav {
+    width: 48vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between !important;
+} */
+.side_right_sm_Show {
+    height: 100%;
+    animation: sliderSideRight linear 0.25s forwards;
+}
+
+.side_right_sm_Hide {
+    height: 100%;
+    animation: sliderSideRightHide linear 0.25s forwards;
+}
+
+@keyframes sliderSideRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes sliderSideRightHide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@media (max-width: 767px) {
+    .side_right {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .side_right_sm {
+        display: none !important;
+    }
+}
+
+.context_toIn {
+    animation: sliderIntoLeft ease-in 0.25s forwards;
+}
+
+.context_toOut {
+  display: none; 
+    /* animation: sliderOutRight ease-in 0.25s forwards; */
+}
+
+
+@keyframes sliderIntoLeft {
+    from {
+        
+        opacity: 0;
+        transform: translateX(400px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        display: flex;
+    }
+}
+
+@keyframes sliderOutRight {
+    0% {
+        
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    99% {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+.file_item {
+    display: none;
+    z-index: 10;
+    background-color: #fff;
+    padding: 0 24px;
+}
+
+.file_group:hover .file_item {
+    display: flex;
+
+}
+
+.has_note {
+    position: relative;
+}
+
+.has_note::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--light-blue);
+
+    bottom: 0px;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.skeleton {
+   border: 5px solid #fff;
+}
+
+
+.skeleton > td {   
+    background-color: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton > td::after {
+    position: absolute;
+    content: "";
+    display: block;
+    inset: 0;
+    background-image: linear-gradient(to right, #f5f5f5, rgba(255, 255, 255, 0.8) 5%, #f5f5f5);
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    animation: skeletonAnimate ease-in-out 4s infinite alternate;
+    overflow: hidden;
+}
+
+
+@keyframes skeletonAnimate {
+    from {
+      transform: translateX(-95%); 
+    }
+
+    to {
+        transform:  translateX(95%);
+    }
+}
+
+
+
+@media (min-width: 1365px) {
+    .side-bar {
+        width: 84px;
+    }
+}
+
+.gotoLeft {
+    animation: gotoleft cubic-bezier(0.17, 0.01, 0, 1.22) 0.7s;
+}
+.none {
+    display: none;
+}
+
+@keyframes gotoleft {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+
+    }
+}

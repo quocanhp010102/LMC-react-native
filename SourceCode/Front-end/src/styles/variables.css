@@ -1,0 +1,15 @@
+:root {
+    /* define global variable */
+    --light_blue: #0D2A5A;
+    --green:var(--light-blue);
+    --primary: #014F59;
+    --light-green: #5dab68;
+    --light-blue: #0472BC;
+    --green-bold: #1d4f24;
+    --blue-bold: #014F59;
+    --blue-heavy: #0D2A5A;
+    --light-gray: rgba(181, 181, 181, 0.1);
+    --gray: #7d7d7d;
+    --light-pink: #fff9f9;
+    --text-color: #727272;
+}

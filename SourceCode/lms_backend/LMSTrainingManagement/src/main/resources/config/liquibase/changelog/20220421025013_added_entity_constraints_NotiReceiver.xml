@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity NotiReceiver.
+    -->
+    <changeSet id="20220421025013-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="notification_id"
+                                 baseTableName="noti_receiver"
+                                 constraintName="fk_noti_receiv__notifica_ae_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="notification"/>
+    </changeSet>
+</databaseChangeLog>

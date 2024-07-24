@@ -1,0 +1,32 @@
+
+
+entity Exams {
+	examName String
+}
+
+entity TypeOfExams {
+	typeOfExamsName String
+}
+
+entity Questions {
+	questionsName String
+}
+
+entity Answers {
+	answersName String,
+    answersStatus String
+}
+
+ relationship OneToMany{
+ TypeOfExams to Exams{typeOfExams},
+ Questions to Answers{questions},
+  Exams to Questions{exams}
+ }
+ 
+
+ 
+// Set pagination options
+paginate Exams, Questions, Answers, TypeOfExams with pagination
+
+
+service Exams, Questions, Answers, TypeOfExams with serviceClass

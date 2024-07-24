@@ -1,0 +1,32 @@
+{
+  "changelogDate": "20220331091549",
+  "clientRootFolder": "LMSTrainingManagement",
+  "databaseType": "sql",
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "examsHistoryTeacherComment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "examsHistoryAnswer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "examsHistoryPoint",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "examsHistorySubmissionTime",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LMSTrainingManagement",
+  "name": "ExamsHistory",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": true,
+  "service": "serviceClass"
+}

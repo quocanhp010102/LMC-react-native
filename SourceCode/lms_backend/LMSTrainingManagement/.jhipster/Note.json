@@ -1,0 +1,28 @@
+{
+  "changelogDate": "20220407022956",
+  "clientRootFolder": "LMSTrainingManagement",
+  "databaseType": "sql",
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "noteDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LMSTrainingManagement",
+  "name": "Note",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "noteContent",
+      "otherEntityRelationshipName": "note",
+      "relationshipName": "noteContent",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": true,
+  "service": "serviceClass"
+}

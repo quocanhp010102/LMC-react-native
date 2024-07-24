@@ -1,0 +1,66 @@
+{
+  "applications": "*",
+  "changelogDate": "20220321110126",
+  "clientRootFolder": "LMSBackend",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "lesson",
+  "fields": [
+    {
+      "fieldName": "lessonName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lessonNotification",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lessonContent",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lessonFile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lessonTimeStart",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "lessonTimeEnd",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LMSTrainingManagement",
+  "name": "Lesson",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "course",
+      "otherEntityRelationshipName": "lesson",
+      "relationshipName": "course",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "course",
+      "otherEntityRelationshipName": "lesson",
+      "relationshipName": "course",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "history",
+      "otherEntityRelationshipName": "lesson",
+      "relationshipName": "history",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": true,
+  "service": "serviceClass"
+}

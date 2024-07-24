@@ -1,0 +1,120 @@
+.manager_table {
+    border-bottom: 1px solid #6363631a;
+}
+
+.manager_table > thead > tr > td,
+.manager_table > tbody > tr > td {
+    padding: 24px 5px;
+    border-left: 1px solid rgba(99, 99, 99, 0.1);
+    border-right: 1px solid rgba(99, 99, 99, 0.1);
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.manager_table > thead > tr:nth-child(even),
+.manager_table > tbody > tr:nth-child(odd) {
+    background-color: rgba(99, 99, 99, 0.1);
+}
+
+/* .manager_table > thead > tr > td:first-child {
+    width: 50px;
+} */
+
+.checkbox-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 18px !important;
+    height: 18px !important;
+
+    outline: 3px solid #ccc;
+    border-radius: 2px;
+    background: #fff;
+    margin: 0 auto;
+}
+.checkbox-item > span {
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0;
+    color: var(--light_blue);
+}
+
+input[type='checkbox']:checked ~ .checkbox-item {
+    outline: 3px solid var(--light_blue);
+}
+
+input[type='checkbox']:checked ~ .checkbox-item > span {
+    opacity: 1;
+}
+
+.activeLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: rgba(99, 99, 99, 0.2);
+    border-radius: 5px;
+}
+
+.text_area {
+    width: 100%;
+    height: 106px;
+    border-radius: 4px;
+    overflow: hidden;
+    border-color: rgba(125, 125, 125, 0.3);
+    padding: 0 4px;
+}
+
+.custom_select {
+    position: relative;
+}
+
+.text-editor {
+    height: 438px;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+    /* border: 1px solid rgba(125, 125, 125, 0.3); */
+}
+
+.label-radio {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100rem;
+    border: 3px solid #DADADA;
+}
+
+.label-radio::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50%;
+    height: 50%;
+    border-radius: 100rem;
+    background-color: #DADADA;
+    transition: all 0.2 linear;
+    display: none;
+    /* transform: scale(0); */
+}
+
+input[type='radio']:checked ~ .label-radio::after {
+    display: block;
+}
+
+.display_none {
+    display: none !important;
+}
+
+.modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 90;
+}

@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "changelogDate": "20220323115909",
+  "clientRootFolder": "LMSBackend",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "file_of_course",
+  "fields": [
+    {
+      "fieldName": "fileOfCoursePath",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LMSTrainingManagement",
+  "name": "FilesOfCourse",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "course",
+      "otherEntityRelationshipName": "filesOfCourse",
+      "relationshipName": "course",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "course",
+      "otherEntityRelationshipName": "filesOfCourse",
+      "relationshipName": "course",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": true,
+  "service": "serviceClass"
+}

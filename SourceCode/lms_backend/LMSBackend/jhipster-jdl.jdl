@@ -1,0 +1,46 @@
+entity Course {
+	courseNotification String ,
+    courseName String required 
+}
+
+entity Lesson {
+	lessonName String required ,
+    lessonNotification String required ,
+    lessonContent String required,
+    lessonFile String ,
+    lessonTimeStart LocalDate
+    lessonTimeEnd LocalDate 
+}
+entity FilesOfCourse {
+	fileOfCoursePath String required 
+}
+
+enum Language {
+	ENGLISH, VIETNAMESE
+}
+relationship OneToMany {
+	Course to Lesson{course},
+    Course to FilesOfCourse{course}
+}
+
+
+
+
+
+
+relationship ManyToOne {
+	Lesson{course} to Course,
+    FilesOfCourse{course} to Course
+}
+
+
+// Set pagination options
+
+paginate Course, FilesOfCourse, Lesson with pagination
+service Course, FilesOfCourse, Lesson with serviceClass
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+// Set an angular suffix
+// angularSuffix * with mySuffix

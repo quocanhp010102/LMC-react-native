@@ -1,0 +1,199 @@
+{
+  "name": "LMS",
+  "version": "0.0.1",
+  "scripts": {
+    "precommit": "lint-staged",
+    "postinstall": "patch-package",
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "dev": "node server.js",
+    "devnext": "next dev -p 3001",
+    "eject": "expo eject",
+    "build": "next build",
+    "lint": "yarn eslint --ext .js,.jsx,.ts,.tsx src pages --color",
+    "prestorybook": "rnstl",
+    "storybook": "start-storybook",
+    "build-storybook": "build-storybook",
+    "test": "jest --watch --coverage=false --changedSince=master",
+    "test:debug": "jest -o --watch --coverage=false",
+    "test:ci": "jest && yarn test:type",
+    "test:type": "tsc --project . --noEmit",
+    "gen:gql": "graphql-codegen --config ../queries/codegen.yml",
+    "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'",
+    "build:android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "coverageReporters": [
+      "text",
+      "json-summary",
+      "html"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/components/**/*.{ts,tsx}",
+      "!src/components/Player/*Adapter.{ts,tsx}",
+      "!src/error-codes.ts",
+      "!src/queries.tsx",
+      "!src/hooks/*",
+      "!src/helpers/*",
+      "!src/components/SvgIcon/types.ts",
+      "!src/rebass/index.ts",
+      "!src/**/index.ts",
+      "!src/wap-containers/**/*",
+      "!**/coverage/**",
+      "!**/node_modules/**",
+      "!**/babel.config.js",
+      "!**/jest.setup.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 84.07,
+        "branches": 73.35,
+        "functions": 80,
+        "lines": 85
+      }
+    },
+    "transform": {
+      "^.+\\.stories\\.js$": "@storybook/addon-storyshots/injectFileName"
+    }
+  },
+  "dependencies": {
+    "@expo/next-adapter": "^2.1.64",
+    "@expo/react-native-action-sheet": "^3.6.0",
+    "@react-keycloak/native": "^0.6.4",
+    "@react-native-async-storage/async-storage": "1.17.11",
+    "@react-native-community/checkbox": "^0.5.12",
+    "@react-native-community/datetimepicker": "6.7.3",
+    "@react-native-community/masked-view": "^0.1.11",
+    "@react-native-community/netinfo": "9.3.7",
+    "@react-native-community/slider": "4.4.2",
+    "@react-native-picker/picker": "^2.4.10",
+    "@react-navigation/bottom-tabs": "^6.2.0",
+    "@react-navigation/drawer": "^5.x",
+    "@react-navigation/native": "^5.9.4",
+    "@react-navigation/stack": "^5.2.13",
+    "@reduxjs/toolkit": "^1.8.0",
+    "@shopify/react-native-skia": "0.1.216",
+    "@types/sockjs-client": "^1.5.1",
+    "@types/stompjs": "^2.3.5",
+    "@types/styled-system": "^5.1.10",
+    "@wxik/core": "^0.5.5",
+    "add": "^2.0.6",
+    "axios": "^0.26.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "dayjs": "^1.11.2",
+    "deprecated-react-native-prop-types": "^4.1.0",
+    "eas-cli": "^0.52.0",
+    "expo": "~48.0.18",
+    "expo-auth-session": "~4.0.3",
+    "expo-av": "~13.2.1",
+    "expo-constants": "~14.2.1",
+    "expo-document-picker": "~11.2.2",
+    "expo-image-picker": "~14.1.1",
+    "expo-linear-gradient": "~12.1.2",
+    "expo-random": "~13.1.1",
+    "expo-secure-store": "~12.1.1",
+    "expo-splash-screen": "~0.18.2",
+    "expo-status-bar": "~1.4.4",
+    "expo-updates": "~0.16.4",
+    "global": "^4.4.0",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.2",
+    "net": "^1.0.2",
+    "next": "^10.0.9",
+    "next-images": "^1.3.1",
+    "patch-package": "^7.0.0",
+    "path-browserify": "^1.0.1",
+    "qs": "^6.10.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.71.8",
+    "react-native-app-auth": "^6.4.3",
+    "react-native-autoheight-webview": "^1.6.1",
+    "react-native-easy-grid": "^0.2.2",
+    "react-native-element-dropdown": "^2.9.0",
+    "react-native-fast-image": "^8.6.3",
+    "react-native-gesture-handler": "~2.9.0",
+    "react-native-hexagon": "^0.9.0",
+    "react-native-inappbrowser-reborn": "^3.7.0",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5",
+    "react-native-level-fs": "^3.0.1",
+    "react-native-mime-types": "^2.3.0",
+    "react-native-modal": "^13.0.1",
+    "react-native-modal-datetime-picker": "^13.1.0",
+    "react-native-pell-rich-editor": "1.9.0",
+    "react-native-reanimated": "~2.14.4",
+    "react-native-render-html": "^6.3.4",
+    "react-native-safe-area-context": "4.5.0",
+    "react-native-screens": "~3.20.0",
+    "react-native-svg": "13.4.0",
+    "react-native-swipeout": "^2.3.6",
+    "react-native-swiper": "^1.6.0",
+    "react-native-webview": "11.26.0",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "sockjs-client": "^1.6.0",
+    "stompjs": "^2.3.3",
+    "styled-components": "^5.0.1",
+    "styled-system": "^5.1.5",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/react-native": "^7.2.0",
+    "@types/react": "~18.0.27",
+    "@types/react-native": "~0.64.12",
+    "@types/react-redux": "^7.1.23",
+    "@types/react-test-renderer": "^16.9.2",
+    "@types/styled-components": "^5.0.1",
+    "@types/styled-components-react-native": "^5.1.1",
+    "babel-preset-expo": "^9.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.0",
+    "typescript": "^4.9.4"
+  },
+  "private": true,
+  "eslintConfig": {
+    "plugins": [
+      "prettier"
+    ],
+    "extends": "universe/native",
+    "rules": {
+      "prettier/prettier": "error",
+      "flowtype/no-types-missing-file-annotation": 0
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "**/*.json": [
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./storybook"
+      ],
+      "pattern": "**/*.stories.js",
+      "outputFile": "./storybook/storyLoader.js"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn precommit"
+    }
+  }
+}

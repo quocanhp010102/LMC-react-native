@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "packagerOpts": {
+      "config": "rn-cli.config.js"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Xác nhận chọn ảnh."
+        }
+      ]
+    ],
+    "name": "LMS",
+    "slug": "hcm",
+    "scheme": "hcm",
+    "privacy": "unlisted",
+    "version": "1.1.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/40d3cdb0-5daa-4dcc-b93d-8a899b4760bd"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.aladin.lms",
+      "buildNumber": "5",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      },
+      "userInterfaceStyle": "automatic"
+    },
+    "android": {
+      "package": "com.base.rn",
+      "userInterfaceStyle": "automatic",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_INTERNAL_STORAGE",
+        "android.permission.WRITE_INTERNAL_STORAGE",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "userInterfaceStyle": "automatic",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "48697977-8a2a-497c-b3d5-f50cb4ccdf98"
+      }
+    }
+  }
+}

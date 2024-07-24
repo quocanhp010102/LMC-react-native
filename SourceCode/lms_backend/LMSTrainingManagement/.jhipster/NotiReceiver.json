@@ -1,0 +1,27 @@
+{
+  "changelogDate": "20220421025013",
+  "clientRootFolder": "LMSTrainingManagement",
+  "databaseType": "sql",
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "notiReceiverStatus",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LMSTrainingManagement",
+  "name": "NotiReceiver",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "notification",
+      "relationshipName": "notification",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": true,
+  "service": "serviceClass"
+}
